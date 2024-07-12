@@ -265,3 +265,25 @@ MySql Connected
 labuser@ubuntu2204:~/Desktop/mernprojecthandling/project2$ node connection.js 
 MySql Connected
 >>> Result []
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project2$ cd ..
+labuser@ubuntu2204:~/Desktop/mernprojecthandling$ mkdir project3
+labuser@ubuntu2204:~/Desktop/mernprojecthandling$ cd project3
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project3$ npm init -y
+Wrote to /home/labuser/Desktop/mernprojecthandling/project3/package.json:
+
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project3$ touch multicoreprocessing.js
