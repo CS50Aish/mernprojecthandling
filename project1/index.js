@@ -1,6 +1,7 @@
 const { readFile } = require("fs");
 const { readFileSync } = require("fs");
 const { writeFile } = require("fs");
+const { writeFileSync } = require("fs");
 
 // Non-blocking task to read file
 
@@ -29,3 +30,17 @@ writeFile("asyncContent.txt", content, { encoding: 'utf-8' }, (error) => {
     }
     console.log(">>> Asynchronous File Writing Operations is Successful");
 });
+
+// Blocking write to the file
+async function writeContentInFile(){
+    try{
+        const fileContent = "MongoDB is a Non-Relational Database Management System";
+        const data = await writeFileSync("syncContent.txt", fileContent);
+        console.log(">>> Synchronous File Writing Operations is Successful");
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+writeContentInFile();
