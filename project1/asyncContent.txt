@@ -1,1 +1,0 @@
-MYSql is a relational database management system

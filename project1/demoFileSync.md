@@ -1,1 +1,0 @@
-This is a demo file which can be treated as an example file for file handling synchronous operations

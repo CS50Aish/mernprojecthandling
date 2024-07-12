@@ -1,10 +1,8 @@
-const { readFile } = require("fs");
-const { readFileSync } = require("fs");
-const { writeFile } = require("fs");
-const { writeFileSync } = require("fs");
+const { readFile, readFileSync } = require("fs");
+const { unlink, unlinkSync } = require("fs");
+const { writeFile, writeFileSync } = require("fs");
 
 // Non-blocking task to read file
-
 readFile("./demoFile.md", (error, data) => {
     if(error){
         console.error(error);
@@ -46,10 +44,23 @@ async function writeContentInFile(){
 writeContentInFile();
 
 // Non-Blocking File Deletion Task
-unlink("./demoFile.md", (error) => {
+unlink("./asyncContent.txt", (error) => {
     if(error){
         console.log(error);
         return;
     }
     console.log(">>> Asynchronous File Deletion Operation is Successful");
 });
+
+// Blocking File Deletion Task
+async function deleteFile(){
+    try{
+        await unlinkSync("demoFileSync.md");
+        console.log(">>> Synchronous File Deletion Operation is Successful");
+    }
+    catch(error){
+        console.error(error);
+    }
+}
+
+deleteFile();
