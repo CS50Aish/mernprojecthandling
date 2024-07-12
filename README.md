@@ -38,3 +38,18 @@ About to write to /home/labuser/Desktop/mernprojecthandling/project1/package.jso
 
 
 Is this OK? (yes)
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project1$ node index.js 
+>>> Synchronous File Content
+ This is a demo file which can be treated as an example file for file handling synchronous operations
+>>> Synchronous File Writing Operations is Successful
+>>> Asynchronous File Writing Operations is Successful
+>>> Asynchronous File Content
+ This is a demo file which can be treated as an example file for file handling asynchronous operations
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project1$ node index.js 
+>>> Synchronous File Content
+ This is a demo file which can be treated as an example file for file handling synchronous operations
+>>> Synchronous File Writing Operations is Successful
+>>> Asynchronous File Content
+ This is a demo file which can be treated as an example file for file handling asynchronous operations
+>>> Asynchronous File Writing Operations is Successful

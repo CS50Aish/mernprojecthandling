@@ -44,3 +44,12 @@ async function writeContentInFile(){
 }
 
 writeContentInFile();
+
+// Non-Blocking File Deletion Task
+unlink("./demoFile.md", (error) => {
+    if(error){
+        console.log(error);
+        return;
+    }
+    console.log(">>> Asynchronous File Deletion Operation is Successful");
+});
