@@ -18,3 +18,13 @@ async function readFileContent(){
 };
 
 readFileContent();
+
+// Non-blocking write to the file
+const content = "MYSql is a relational database management system";
+writeFile("asyncContent.txt", content, { encoding: 'utf-8' }, (error) => {
+    if(error){
+        console.error(error);
+        return;
+    }
+    console.log(">>> Asynchronous File Writing Operations is Successful");
+});
