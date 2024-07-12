@@ -1,4 +1,5 @@
 const { readFile } = require("fs");
+const { readFileSync } = require("fs");
 
 // Non-blocking task to read file
 
@@ -7,5 +8,13 @@ readFile("./demoFile.md", (error, data) => {
         console.error(error);
         return;
     }
-    console.log(">>> File content\n\b", data.toString());
+    console.log(">>> Asynchronous File Content\n\b", data.toString());
 });
+
+// Blocking task to read the file
+async function readFileContent(){
+    const data = await readFileSync("./demoFileSync.md");
+    console.log(">>> Synchronous File Content\n\b", data.toString());
+};
+
+readFileContent();
