@@ -287,3 +287,9 @@ Wrote to /home/labuser/Desktop/mernprojecthandling/project3/package.json:
 
 
 labuser@ubuntu2204:~/Desktop/mernprojecthandling/project3$ touch multicoreprocessing.js
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project3$ node multicoreprocessing.js 
+16:34:25 GMT+0000 (Coordinated Universal Time)
+>>>  Infinity
+16:34:39 GMT+0000 (Coordinated Universal Time)
+
