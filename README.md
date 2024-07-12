@@ -139,3 +139,76 @@ Query OK, 0 rows affected (0.000 sec)
 
 MariaDB [(none)]> exit
 Bye
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project2$ sudo mysql -u aish -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 37
+Server version: 10.6.12-MariaDB-0ubuntu0.22.04.1 Ubuntu 22.04
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| students           |
++--------------------+
+2 rows in set (0.001 sec)
+
+MariaDB [(none)]> use students;
+Database changed
+MariaDB [students]> exit;
+Bye
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project2$ sudo mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 35
+Server version: 10.6.12-MariaDB-0ubuntu0.22.04.1 Ubuntu 22.04
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE USER 'aish'@'localhost' IDENTIFIED BY 'pass';
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON students.* TO 'aish'@'localhost';
+Query OK, 0 rows affected (0.005 sec)
+
+MariaDB [(none)]> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> exit
+Bye
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project2$ node connection.js 
+MySql Connected
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project2$ node connection.js 
+MySql Connected
+>>> Result OkPacket {
+  fieldCount: 0,
+  affectedRows: 0,
+  insertId: 0,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project2$ node connection.js 
+MySql Connected
+>>> Result OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 1,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0
+}
