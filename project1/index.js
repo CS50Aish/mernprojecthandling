@@ -1,5 +1,6 @@
 const { readFile } = require("fs");
 const { readFileSync } = require("fs");
+const { writeFile } = require("fs");
 
 // Non-blocking task to read file
 
