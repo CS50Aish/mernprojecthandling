@@ -212,3 +212,15 @@ MySql Connected
   protocol41: true,
   changedRows: 0
 }
+
+labuser@ubuntu2204:~/Desktop/mernprojecthandling/project2$ node connection.js 
+MySql Connected
+>>> Result [
+  RowDataPacket {
+    id: 1,
+    name: 'John',
+    email: 'john@gmail.com',
+    phone: '+123456789',
+    address: '123 Wolf Street'
+  }
+]

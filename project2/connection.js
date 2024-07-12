@@ -26,8 +26,10 @@ db.connect((err) => {
 
     let insertStdTable = `INSERT INTO student(name, email, phone, address) values('John', 'john@gmail.com', '+123456789', '123 Wolf Street')`;
 
+    let selectStdTable = `SELECT * FROM student`;
+
     // Use db.query instead of dbConnection.query
-    db.query(insertStdTable, (error, result) => {
+    db.query(selectStdTable, (error, result) => {
         if(error){
             throw error;
         }
